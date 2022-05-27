@@ -5,7 +5,7 @@
 
 def read_file_content(filename):
     # [assignment] Add your code here 
-    with open(filename.txt, 'a') as f:
+    with open(filename.txt, 'r') as f:
         for line in f:
             print(line)
         
