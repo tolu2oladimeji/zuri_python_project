@@ -1,28 +1,28 @@
-# Read text from a file, and count the occurence of words in that text
+# Check if two words are anagrams 
 # Example:
-# count_words("The cake is done. It is a big cake!") 
-# --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
-
-def read_file_content(filename):
-    # [assignment] Add your code here 
-    with open(filename.txt, 'r') as f:
-        for line in f:
-            print(line)
-        
-    #return line
+# find_anagrams("hello", "check") --> False
+# find_anagrams("below", "elbow") --> True
 
 
-def count_words():
-    text = read_file_content("./story.txt")
+def find_anagram(word, anagram):
     # [assignment] Add your code here
-    #word = []
-    count = 0
-    unique_dict = {}
-    
-    for line in text:
-        if line in unique_dict:
-            unique_dict[line] += 1;
-        else:
-            unique_dict[line] = 1;
 
-    return(unique_dict)
+    #make all characters into lower case 
+    word = word.lower()
+    anagram = anagram.lower()
+
+    #check if the length of the two words are the same, continue
+    #else exit the code and print not anagram
+    if(len(word) == len(anagram)):
+
+        #you need to sort the chars first
+        word_sorted = sorted(word)
+        anagram_sorted = sorted(anagram)
+
+        #next compare the two sorted strings together
+        if(word_sorted == anagram_sorted):
+            print("True")
+    else:
+            print("False")
+    #return True
+
