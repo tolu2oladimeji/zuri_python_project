@@ -22,6 +22,8 @@ def find_anagram(word, anagram):
         #next compare the two sorted strings together
         if(word_sorted == anagram_sorted):
             print("True")
+        else:
+            print("False")
     else:
             print("False")
     #return True
